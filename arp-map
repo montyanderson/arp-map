@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo arp-scan --localnet --quiet -N --ignoredups | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"  | tr '\n' ' ' | xargs nmap
